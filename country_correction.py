@@ -5,6 +5,7 @@ def adjust_country_names(df):
     
     COUNTRY_ADJUSTMENTS = {
         'Bosnia and Herzegovina': ['Bosnia and Hezegovina'],
+        'Brunei': ['Brunei Darussalam'],
         'Burma': ['Myanmar'],
         'Cabo Verde': ['Cap Verde'],
         'Czechia': ['Czech Republic'],
@@ -53,7 +54,6 @@ def adjust_country_names(df):
         'Macao SAR China':                              ['China', 'Macau'],
         'Taiwan China':                                 ['China', 'Taiwan'],
         'Puerto Rico':                                  ['United States', 'Puerto Rico'],
-        #'Brunei Darussalam',
         # 'Cook Island',
         # 'Palau',
         # 'Samoa',
