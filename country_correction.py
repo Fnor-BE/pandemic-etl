@@ -14,9 +14,10 @@ def adjust_country_names(df):
         'North Macedonia': ['The former Yugoslav Republic of Macedonia'],
         'Russia': ['Russian Federation'],
         'South Korea': ['Republic of Korea'],
-        'Vietnam': ['Viet Nam'],
+        'Taiwan': ['Taiwan*', 'Taiwan China'],
         'United Kingdom': ['UK'],
         'United States': ['US', 'United States of America'],
+        'Vietnam': ['Viet Nam'],
         'West Bank and Gaza': ['West Bank and Gaza Strip']
     }
     
@@ -52,7 +53,6 @@ def adjust_country_names(df):
         'Hong Kong Special Administrative Region':      ['China', 'Hong Kong'],
         'Hong Kong SAR China':                          ['China', 'Hong Kong'],
         'Macao SAR China':                              ['China', 'Macau'],
-        'Taiwan China':                                 ['China', 'Taiwan'],
         'Puerto Rico':                                  ['United States', 'Puerto Rico'],
         # 'Cook Island',
         # 'Palau',
