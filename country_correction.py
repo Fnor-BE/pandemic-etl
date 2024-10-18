@@ -1,8 +1,10 @@
 
 
 def adjust_country_names(df):
+    # Strip the data to make sure it can be safely matched
     df['Country'] = df['Country'].apply(lambda x: x.strip())
     
+    ### This sections handles variants on the country names
     COUNTRY_ADJUSTMENTS = {
         'Bosnia and Herzegovina': ['Bosnia and Hezegovina'],
         'Brunei': ['Brunei Darussalam'],
@@ -24,9 +26,10 @@ def adjust_country_names(df):
     # Verify 'Country' exists
     for country, variants in COUNTRY_ADJUSTMENTS.items():
         for variant in variants:
-            # Update the Country column for each variant
+            # Update the Country column for each country name variant
             df.loc[df['Country'] == variant, 'Country'] = country
-            
+    
+    ### This section handles  
     SPLIT_COUNTRIES = {
         'Bermuda, UKOT':                                ['United Kingdom', 'Bermuda'],
         'British Virgin Islands,  UKOT':                ['United Kingdom', 'British Virgin Islands'],
@@ -54,6 +57,7 @@ def adjust_country_names(df):
         'Hong Kong SAR China':                          ['China', 'Hong Kong'],
         'Macao SAR China':                              ['China', 'Macau'],
         'Puerto Rico':                                  ['United States', 'Puerto Rico'],
+        # The following countries appear to be sovereign states not present in the COVID dataset
         # 'Cook Island',
         # 'Palau',
         # 'Samoa',
